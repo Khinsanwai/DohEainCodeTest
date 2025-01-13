@@ -48,12 +48,5 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
-    public function tasks()
-    {
-        return $this->hasMany(Task::class, 'assigned_user_id');
-    }
-    public function projects()
-    {
-    return $this->hasMany(Project::class, 'manager_id');
-    }
+
 }
